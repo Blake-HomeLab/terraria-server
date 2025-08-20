@@ -63,7 +63,6 @@ RUN steamcmd +quit
 COPY --chown=tml:tml manage-tModLoaderServer.sh .
 
 RUN ./manage-tModLoaderServer.sh install-tml --github --tml-version $TML_VERSION
-RUN ./manage-tModLoaderServer.sh install-mods
 
 EXPOSE 7777
 
