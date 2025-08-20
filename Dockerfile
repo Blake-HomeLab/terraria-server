@@ -50,7 +50,7 @@ ENV UPNP="1"
 ENV NPCSTREAM="1"
 ENV PRIORITY=""
 
-# ENV MODPATH="/home/tml/.local/share/Terraria/tModLoader/Mods/"
+ENV MODPATH="/home/tml/.local/share/Terraria/tModLoader/Mods/"
 
 
 # Update SteamCMD and verify latest version
@@ -66,4 +66,4 @@ RUN ./manage-tModLoaderServer.sh install-tml --github --tml-version $TML_VERSION
 
 EXPOSE 7777
 
-ENTRYPOINT [ "./manage-tModLoaderServer.sh", "start" ]
+ENTRYPOINT [ "entrypoint.sh" ]
